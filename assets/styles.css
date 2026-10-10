@@ -462,9 +462,25 @@ p { margin: 0 0 1em; }
   border: 8px solid var(--pink);
 }
 .photo-stack.on-orange .photo-round { border-color: var(--terracotta); }
-.badge-left { margin: 0 0 28px; width: 132px; height: 132px; }
-.badge-left .mark { inset: 27px; }
-@media (max-width: 860px) { .badge-left { margin-inline: 0; } }
+.badge-hero {
+  width: clamp(160px, 16vw, 190px);
+  height: clamp(160px, 16vw, 190px);
+  margin: 0 auto 4px;
+  border-radius: 50%;
+  background: var(--terracotta);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, .3);
+}
+.hero-copy:has(.badge-hero) { padding-bottom: clamp(28px, 3vw, 40px); }
+.badge-hero .mark { inset: 20%; }
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
 
 /* ---------- lists & cards ---------- */
 
