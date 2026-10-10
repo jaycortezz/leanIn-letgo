@@ -461,6 +461,10 @@ p { margin: 0 0 1em; }
   bottom: 0;
   border: 8px solid var(--pink);
 }
+.photo-stack.on-orange .photo-round { border-color: var(--terracotta); }
+.badge-left { margin: 0 0 28px; width: 132px; height: 132px; }
+.badge-left .mark { inset: 27px; }
+@media (max-width: 860px) { .badge-left { margin-inline: 0; } }
 
 /* ---------- lists & cards ---------- */
 
